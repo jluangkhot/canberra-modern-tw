@@ -16,7 +16,8 @@ module.exports = {
 				primary: '#3490dc', // Add your custom primary color
 				secondary: '#6574cd', // Add your custom secondary color
 				debug: '#FFCA28', // Just so you can see how this is powerful
-				// Add more custom colors as needed
+				cream: '#FFF9E0',
+				grey: 'AAA8A0',// Add more custom colors as needed
 			},
 			fontFamily: {
 				//font files are declared in html-header.twig file

@@ -1,12 +1,29 @@
 {# MENU COMES FROM menu.twig #}
 
+
 {% if menu %}
-	<ul>
+
+
+	<ul class="flex justify-center space-x-7 uppercase text-xl  font-bold">
+		
 		{% for item in items %}
-			<li class="{{ item.classes | join(' ') }}">
-				<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-				{% include "menu.twig" with {'items': item.children} %}
+		
+		
+	
+			<li class="group w-37 { item.classes | join(' ') }}" >
+					
+					<a class="hover:opacity-60 " target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}
+						
+						<div class="absolute invisible group-hover:visible bg-black text-white flex justify-center">
+							<div class="relative -left-4">
+						{% include "menu.twig" with {'items': item.children} %}
+						</div>
+						</div>
+					</a>
+			
 			</li>
+			
 		{% endfor %}
 	</ul>
+
 {% endif %}

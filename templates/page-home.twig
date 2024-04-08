@@ -3,19 +3,32 @@
 {% extends "base.twig" %}
 
 {% block content %}
-
-	<div class="content-wrapper">
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
+	
+	<div class="p-7 bg-[url('nishi.jpg')] content-wrapper h-[55rem] bg-cover " >
+		<article class="w-1/2  static post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="bg-black/50 relative bottom-0 left-24 top-14 article-content rounded">
+				<h1 class="px-5 pt-5  text-white text-[2.5rem] article-h1">Canberra Modern</h1>
+				
+					<div class="text-white p-5 article-body">
 					{{post.content}}
-				</div>
+					</div>
+					
 			</section>
+
+			
 		</article>
 	</div>
 
+<section class="bg-cream h-screen flex justify-center items-center">
+	
+	<div class="flex items-center"> 
 
+		<img src="http://cm2/wp-content/uploads/2022/08/rsw_1160-5-1024x681.webp" alt="" class="wp-image-202 flex justify-center h-[45rem] rounded"/> 
+	</div>
+	
+</section>
+
+			
 	<div
 		class="debug p-8 bg-debug">
 		{# useful for debugging, delete later #}
