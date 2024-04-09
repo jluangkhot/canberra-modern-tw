@@ -5,12 +5,16 @@
 {% block content %}
 	<div class="content-wrapper test">
 
-
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
+		
+			<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		
+			<section class="article-content bg-cream">
+				<h1 class="bg-primary article-h1 font-bold text-4xl p-[3rem] uppercase flex justify-center text-yellow">{{post.title}}</h1>
+				
+				<div class="article-body grid grid-cols-3 gap-4 px-60 py-[6rem] *:bg-white *:flex *:justify-center relative *:p-14 text-sm">
+					
 					{{post.content}}
+					
 				</div>
 			</section>
 		</article>

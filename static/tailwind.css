@@ -10,3 +10,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wp-block-group h4 {
+    font-weight: bold;
+    text-align: center;
+    font-size: x-large;
+    
+}
+.wp-block-group p{
+    padding-bottom: 3rem;
+}
+.wp-block-group {
+    border-radius: 0.5rem;
+}
+
+.wp-block-group p a  {
+    color: black;
+    font-weight: bold;
+    background-color: #FFC400;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    
+}
+.wp-block-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}

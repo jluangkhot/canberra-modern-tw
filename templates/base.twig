@@ -10,10 +10,11 @@
 
 		<div class="bg-cream wrapper">
 			<div class="pt-8 flex justify-center items-center">
-				<h1 class="h-[3rem] w-[3rem] hdr-logo bg-[url('asset-black.png')] bg-contain " role="banner">
-					<a class="hdr-logo-link invisible" href="{{site.url}}" rel="home">{{site.name}}
+				<a class="hdr-logo-link" href="{{site.url}}" rel="home">
+					<img src="http://cm2/wp-content/uploads/2024/04/asset-black.png" class="h-[3rem] w-[3rem] hdr-logo " role="banner" >
+					
 					</a>
-				</h1>
+				
 			</div>
 			<nav id="nav-main" class="nav-main  py-8" role="navigation">
 				{% include "menu.twig" with {'items': menu.get_items} %}
@@ -26,9 +27,9 @@
 <section id="content" role="main" class="content-wrapper">
 	{% if title %}
 		<!-- this title comes from the base.twig file -->
-		<h1>{{title}}</h1>
+		<h1 class="font-bold text-4xl p-[3rem] uppercase flex justify-center bg-yellow text-primary">{{title}}</h1>
 	{% endif %}
-	<div class="wrapper">
+	<div class="">
 		{% block content %}
 			Sorry, no content
 		{% endblock %}
@@ -41,7 +42,7 @@
 </section>
 
 {% block footer %}
-	<footer id="footer">
+	<footer id="footer" class="bg-yellow h-[4rem]">
 		{% include 'footer.twig' %}
 	</footer>
 	{{ function('wp_footer') }}
