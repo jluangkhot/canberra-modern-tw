@@ -32,10 +32,36 @@
     border-radius: 0.25rem;
     
 }
+
+.wp-block-group p a:hover {
+    background-color: #b78c00;
+}
+
+
 .wp-block-image {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 4rem;
     padding-bottom: 4rem;
+}
+
+.tease-post h2{
+    font-size: x-large;
+    font-weight: bold;
+    align-items: center;
+}
+
+#tease-292{
+    background-color: white;
+    border-radius: 0.25rem;
+
+    width: 50%;
+    height: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    
+    
+    
 }
