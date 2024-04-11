@@ -8,10 +8,16 @@
 
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
+				<h1 class="a srticle-h1">{{post.title}}</h1>
+				{% if post.title == 'About' %}
+					<div class="justify-center grid grid-cols-3 article-body *:w-1/ bg-cream">
 					{{post.content}}
-				</div>
+					</div>
+				{% elseif post.title == 'Galleries'  %}
+					<div class="article-body">
+					 {{post.content}}	
+					</div>
+				{% endif %}
 			</section>
 		</article>
 	</div>
@@ -19,7 +25,7 @@
 	<div
 		class="debug p-8 bg-debug">
 		{# useful for debugging, delete later #}
-		<h1>Debug info</h1>
+		<h1>Debug</h1>
 
 		<p class="pb-4">post name:
 			{{post.name}}</p>

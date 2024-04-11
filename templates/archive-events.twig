@@ -4,23 +4,20 @@
 {% extends "index.twig" %}
 
 {% block content %}
-
-	{% for post in posts %}
-		{# it will look for tease-events.twig, and then go to tease.twig #}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
-	{% endfor %}
-
-	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
-
-	<div
-		class="debug p-8 bg-debug">
-		{# useful for debugging, delete later #}
-		<h1>Debug info</h1>
-
-		<p>file name: archive-events.twig</p>
-
-		{# Output what is in the post #}
-		{# {{dump(post)}} #}
-	</div>
-
+    <div class="article-body flex flex-wrap justify-center">
+        {% for post in posts %}
+            {# it will look for tease-events.twig, and then go to tease.twig #}
+            {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] with { position: loop.index } %}
+        {% endfor %}
+    </div>
+    <div class="debug p-8 bg-yellow-400">
+        {# useful for debugging, delete later #}
+        <h1 class="text-black">Debug info</h1>
+        <p class="text-black">file name: archive-events.twig</p>
+        {# Output what is in the post #}
+        {# {{dump(post)}} #}
+    </div>
 {% endblock %}
+
+
+
