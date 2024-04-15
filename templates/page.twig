@@ -2,39 +2,138 @@
 
 {% extends "base.twig" %}
 
+
+
 {% block content %}
-	<div class="content-wrapper test">
+    <div class="content-wrapper test">
+        <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+            <section class="article-content bg-[#FFC400]">
+                <h1 class="article-h1 text-2xl font-bold text-center">{{post.title}}</h1>
+                {% if post.title == 'About' %}
+                    <div class="justify-center grid grid-cols-3 article-body bg-cream"> <!-- Changed bg-cream here -->
+                        {{post.content}}
+                    </div>
+                {% elseif post.title == 'Galleries'  %}
+                    <div class="slideshow-container py-9 ">
+						<div class="carousel">
 
+						</div>
+                        <div class="hidden">
+                            {{ post.content|raw }}
+                        </div>
+                    </div>
+                {% endif %}
+            </section>
+        </article>
+    </div>
 
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<section class="article-content">
-				<h1 class="a srticle-h1">{{post.title}}</h1>
-				{% if post.title == 'About' %}
-					<div class="justify-center grid grid-cols-3 article-body *:w-1/ bg-cream">
-					{{post.content}}
-					</div>
-				{% elseif post.title == 'Galleries'  %}
-					<div class="article-body">
-					 {{post.content}}	
-					</div>
-				{% endif %}
-			</section>
-		</article>
-	</div>
+    <div class="debug p-8 bg-[#FFF9E0]">
+        {# useful for debugging, delete later #}
+        <h1>Debug</h1>
+        <p class="pb-4">post name: {{post.name}}</p>
+        <p>file name: page.twig</p>
+        {# Output what is in the post #}
+        {# {{dump(post)}} #}
+    </div>
 
-	<div
-		class="debug p-8 bg-debug">
-		{# useful for debugging, delete later #}
-		<h1>Debug</h1>
+    <!-- /content-wrapper -->
 
-		<p class="pb-4">post name:
-			{{post.name}}</p>
+    <style>
+        .content-wrapper.test { /* Added cream background color */
+            background-color: #fff4e6; /* Cream color */
+        }
 
-		<p>file name: page.twig</p>
+		.carousel {
+			position: relative;
+			margin: auto;
+			max-width: 700px; /* Adjust max-width as needed */
+			height: 450px;
+			overflow: hidden;
+		}
 
-		{# Output what is in the post #}
-		{# {{dump(post)}} #}
-	</div>
+		.slide {
+			
+			display: none;
+			text-align: center;
+		}
 
-	<!-- /content-wrapper -->
+		.slide img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 15px;
+		}
+
+		.prev, .next {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			cursor: pointer;
+			padding: 16px;
+			background-color: black;
+			color: white;
+			font-size: 20px;
+			border: none;
+			border-radius: 50%;
+			z-index: 1000;
+		}
+
+		.prev {
+			left: 0;
+		}
+
+		.next {
+			right: 0;
+		}
+    </style>
+
+	{% if post.title == 'Galleries' %}
+		<script>
+			let carousel = document.querySelector(".carousel");
+			let gallery = document.getElementsByClassName("wp-block-gallery")[0];
+			let imgs = gallery.querySelectorAll("img");
+			
+			imgs.forEach(function (img){
+				// set attribute for img
+				img.style.width = '100%';
+				img.style.height = '100%';
+
+				// set attribute for slide
+				div = document.createElement("div");
+				div.setAttribute("class", "slide");
+				div.style.width = '100%';
+				div.style.height = '100%';
+				div.style.padding = '1rem 3rem';
+
+				// add img into slide
+				div.appendChild(img);
+
+				// add slide into carousel
+				carousel.appendChild(div);
+			});
+
+			// add prev & next button to change slide
+			carousel.innerHTML += `
+				<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    			<a class="next" onclick="changeSlide(1)">&#10095;</a>`;
+
+			var slideIndex = 1;
+
+			function changeSlide(n) {
+				showSlide(slideIndex += n);
+			}
+
+			function showSlide(n) {
+				var slides = document.querySelectorAll('.slide');
+				if (n > slides.length) { slideIndex = 1 }
+				if (n < 1) { slideIndex = slides.length }
+				for (var i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				slides[slideIndex - 1].style.display = "block";
+			}
+
+			showSlide(slideIndex);
+		</script>
+	{% endif %}
+
 {% endblock %}
