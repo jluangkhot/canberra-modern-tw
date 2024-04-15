@@ -4,7 +4,7 @@
 {% extends "index.twig" %}
 
 {% block content %}
-    <div class="article-body flex flex-wrap justify-center">
+    <div class="article-body flex flex-wrap justify-center px-5">
         {% for post in posts %}
             {# it will look for tease-events.twig, and then go to tease.twig #}
             {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] with { position: loop.index } %}
