@@ -11,6 +11,119 @@
 @tailwind components;
 @tailwind utilities;
 
-.wp-block-heading{
-    color: rgb(0, 0, 0);
+.wp-block-group h4 {
+    font-weight: bold;
+    text-align: center;
+    font-size: x-large;
+    
+}
+.wp-block-group p{
+    padding-bottom: 3rem;
+}
+.wp-block-group {
+    border-radius: 0.5rem;
+}
+
+.wp-block-group p a  {
+    color: black;
+    font-weight: bold;
+    background-color: #FFC400;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    
+}
+
+.wp-block-group p a:hover {
+    background-color: #b78c00;
+}
+
+
+.wp-block-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.tease-post h2{
+    font-size: x-large;
+    font-weight: bold;
+    align-items: center;
+}
+
+#tease-292{
+    background-color: white;
+    border-radius: 0.25rem;
+    padding: 3rem;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    overflow: hidden;
+    height: 30rem;
+    width: 40rem;
+    position: relative;
+    top: 5rem;
+    left: 5rem;
+}
+
+.tease-post img{
+    object-fit: fill;
+    justify-content: center;
+    padding-top: 2rem;
+    width:30rem;
+    height: 18rem;
+    margin: auto;
+    
+}
+
+#post-121{
+    background-color: #FFF9E0;
+}
+
+.tease-buildings h2, .tease-buildings h3, .tease-buildings p{
+    float: left;
+    color: black;
+    position: relative;
+}
+
+.tease-buildings p {
+    color: rgb(5, 5, 5);
+    text-align: center;
+    width: 80%;
+}
+
+#tease-142, #tease-140, #tease-138, #tease-136, #tease-134, #tease-132, #tease-130,
+#tease-128, #tease-124, #tease-120 {
+    float:left;
+    margin-right: 50px;
+    width:100%;
+    height: auto;
+}
+
+#tease-143, #tease-141, #tease-139, #tease-137, #tease-135, #tease-133, #tease-131,
+#tease-129, #tease-127, #tease-123 {
+    float: right;
+    margin-left: 10px;
+    width: 800px;
+    height: auto;
+}
+
+#tease-141, #tease-142, #tease-143, #tease-140, #tease-139, #tease-138, #tease-137, 
+#tease-136, #tease-135, #tease-134, #tease-133, #tease-132, #tease-131, #tease-130,
+#tease-129, #tease-128, #tease-127, #tease-124, #tease-123, #tease-120 {
+    background-color:#FFF9E0;
+}
+
+#tease-292 p{
+    width: 33rem;
+}
+
+#tease-292 p a {
+    color: black;
+    font-weight: bold;
+    background-color: #FFC400;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    position: relative;
+    top: 0.5rem;
+
 }

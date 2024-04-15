@@ -5,15 +5,15 @@
 
 
 {% block content %}
-    <div class="content-wrapper test">
-        <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-            <section class="article-content bg-[#FFC400]">
-                <h1 class="article-h1 text-2xl font-bold text-center">{{post.title}}</h1>
-                {% if post.title == 'About' %}
-                    <div class="justify-center grid grid-cols-3 article-body bg-cream"> <!-- Changed bg-cream here -->
-                        {{post.content}}
-                    </div>
-                {% elseif post.title == 'Galleries'  %}
+	<div class="content-wrapper test">
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+			<section class="article-content bg-cream">
+				<h1 class="bg-primary article-h1 font-bold text-2xl p-8 uppercase flex justify-center text-white">{{post.title}}</h1>
+				{% if post.title == 'About' %}
+					<div class="article-body grid grid-cols-3 gap-4 px-60 py-[6rem] *:bg-white *:flex *:justify-center relative *:p-14 text-sm">
+						{{post.content}}
+					</div>
+				{% elseif post.title == 'Galleries'  %}
                     <div class="slideshow-container py-9 ">
 						<div class="carousel">
 
@@ -23,9 +23,9 @@
                         </div>
                     </div>
                 {% endif %}
-            </section>
-        </article>
-    </div>
+			</section>
+		</article>
+	</div>
 
     <div class="debug p-8 bg-[#FFF9E0]">
         {# useful for debugging, delete later #}

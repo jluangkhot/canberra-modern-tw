@@ -4,9 +4,17 @@
 
 {% block content %}
 
+	<div class="bg-cream h-screen ">
 	{% for post in posts %}
+	
+		
+		<div class="">
 		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+		</div>
+		
+	
 	{% endfor %}
+	</div>
 
 	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
 
