@@ -13,7 +13,7 @@
 				<a class="hdr-logo-link" href="{{site.url}}" rel="home">
 					<img src="http://cm2/wp-content/uploads/2024/04/asset-black.png" class="h-[3rem] w-[3rem] hdr-logo " role="banner" >
 					
-					</a>
+				</a>
 				
 			</div>
 			<nav id="nav-main" class="nav-main  py-8" role="navigation">
@@ -27,7 +27,7 @@
 <section id="content" role="main" class="content-wrapper">
 	{% if title %}
 		<!-- this title comes from the base.twig file -->
-		<h1 class="font-bold text-4xl p-[2rem] uppercase flex justify-center bg-yellow text-primary">{{title}}</h1>
+		<h1 class="font-bold text-2xl p-8 uppercase flex justify-center bg-black text-white ">{{title}}</h1>
 	{% endif %}
 	<div class="">
 		{% block content %}
@@ -42,8 +42,47 @@
 </section>
 
 {% block footer %}
-	<footer id="footer" class="bg-yellow h-[4rem]">
+	<footer id="footer" class="w-100% bg-gradient-to-l from-black to-yellow">
+
+		<div class="grid grid-cols-3 divide-x text-white pt-[1rem] px-[3rem] items-center">
+
+			<div class="logo flex justify-center m-auto  ">
+				<img src="http://cm2/wp-content/uploads/2024/04/asset-black.png" class=" w-[3rem] h-[3rem] p-2 relative top-3">
+				<h3 class="text-md font-bold uppercase w-3 p-2">Canberra Modern</h3>
+			</div>
+
+			<div class="space-y-3 items-center">
+				<h3 class="flex justify-center text-am uppercase font-bold" >Subscribe to our Newsletter</h3>
+				<div class="flex justify-center text-xs text-black">
+					<label for="email"></label>
+					<input class="rounded-l-md p-[0.15rem] border-y-4 border-l-4 border-solid border-grey" type="text" placeholder="Enter Email" name="email" required>
+					
+					<button type="submit" value="submit" class="border-y-4 border-r-4 border-solid border-grey rounded-r-md bg-yellow text-white py-[0.15rem] px-[0.5rem] hover:bg-black hover:text-yellow">Sign Up</button>
+				</div>
+			</div>
+
+			<div class=" space-y-1 items-center">
+				<h3 class="uppercase flex justify-center text-md font-semibold pb-[0.25rem]">Contact Us</h3>
+
+					<div class="socials flex justify-center space-x-3">
+						<a class="footer-logo-link-facebook" href="https://www.facebook.com/canberramodern/" rel="home">
+
+							<img src="http://cm2/wp-content/uploads/2024/04/facebook_3670032.png" class="h-[2rem] w-[2rem]" role="banner" ></a>
+
+						<a class="footer-logo-link-instagram " href="https://www.instagram.com/canberra_modern/" rel="home">
+							<img src="http://cm2/wp-content/uploads/2024/04/instagram_3670125.png" class="h-[2rem] w-[2rem] hdr-logo " role="banner"></a>
+
+						
+					</div>
+
+					<p class="flex justify-center text-xs">canberramodern@gmail.com</p>
+
+			</div>
+		</div>
+
+		<div class="text-xs text-white bg-gradient-to-l from-black to-yellow pl-[1rem] pt-[0.25rem] pb-[0.25rem]" id="footer-tag">
 		{% include 'footer.twig' %}
+		</div>
 	</footer>
 	{{ function('wp_footer') }}
 {% endblock %}</body></html>

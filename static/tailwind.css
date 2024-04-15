@@ -55,14 +55,23 @@
 #tease-292{
     background-color: white;
     border-radius: 0.25rem;
-
-    width: 50%;
+    padding: 3rem;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    overflow: hidden;
     height: 30rem;
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    
-    
+    width: 40rem;
+    position: relative;
+    top: 5rem;
+    left: 5rem;
+}
+
+.tease-post img{
+    object-fit: fill;
+    justify-content: center;
+    padding-top: 2rem;
+    width:30rem;
+    height: 18rem;
+    margin: auto;
     
 }
 
@@ -70,14 +79,14 @@
     background-color: #FFF9E0;
 }
 
-.tease-buildings h2, h3, p{
+.tease-buildings h2, .tease-buildings h3, .tease-buildings p{
     float: left;
     color: black;
     position: relative;
 }
 
 .tease-buildings p {
-    color: blue;
+    color: rgb(5, 5, 5);
     text-align: center;
     width: 80%;
 }
@@ -104,3 +113,17 @@
     background-color:#FFF9E0;
 }
 
+#tease-292 p{
+    width: 33rem;
+}
+
+#tease-292 p a {
+    color: black;
+    font-weight: bold;
+    background-color: #FFC400;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    position: relative;
+    top: 0.5rem;
+
+}

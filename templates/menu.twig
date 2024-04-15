@@ -14,7 +14,7 @@
 					
 					<a class="hover:text-yellow" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}
 						
-						<div class="absolute invisible group-hover:visible bg-black text-white flex justify-center rounded">
+						<div class="absolute invisible group-hover:visible bg-black text-white rounded  ">
 							<div class="relative -left-4">
 						{% include "menu.twig" with {'items': item.children} %}
 						</div>
