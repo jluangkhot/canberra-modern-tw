@@ -46,6 +46,7 @@
     padding-bottom: 4rem;
 }
 
+<<<<<<< Updated upstream
 .tease-post h2{
     font-size: x-large;
     font-weight: bold;
@@ -90,12 +91,14 @@
     text-align: center;
     width: 80%;
 }
+=======
+>>>>>>> Stashed changes
 
 #tease-142, #tease-140, #tease-138, #tease-136, #tease-134, #tease-132, #tease-130,
 #tease-128, #tease-124, #tease-120 {
     float:left;
     margin-right: 50px;
-    width:100%;
+    width:50%;
     height: auto;
 }
 
@@ -103,16 +106,15 @@
 #tease-129, #tease-127, #tease-123 {
     float: right;
     margin-left: 10px;
-    width: 800px;
+    width: 50%;
     height: auto;
 }
 
-#tease-141, #tease-142, #tease-143, #tease-140, #tease-139, #tease-138, #tease-137, 
-#tease-136, #tease-135, #tease-134, #tease-133, #tease-132, #tease-131, #tease-130,
-#tease-129, #tease-128, #tease-127, #tease-124, #tease-123, #tease-120 {
-    background-color:#FFF9E0;
+.tease-buildings {
+    overflow: hidden;
 }
 
+<<<<<<< Updated upstream
 #tease-292 p{
     width: 33rem;
 }
@@ -127,3 +129,18 @@
     top: 0.5rem;
 
 }
+=======
+.tease-buildings h2,
+.tease-buildings h3,
+.tease-buildings p {
+    width: 45%;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0;
+}
+
+.tease-buildings p:nth-child(even) {
+    margin-left: 5%;
+}
+>>>>>>> Stashed changes

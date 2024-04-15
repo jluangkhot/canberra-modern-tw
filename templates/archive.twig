@@ -4,11 +4,15 @@
 
 {% block content %}
 
+<<<<<<< Updated upstream
 	<div class="bg-cream h-screen ">
+=======
+	<div class="bg-cream h-screen overflow-hidden flex justify-center items-center">
+>>>>>>> Stashed changes
 	{% for post in posts %}
-	
+	<div class="max-w-screen-1g max-auto mt-9">
 		
-		<div class="">
+		<div class="text-black">
 		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
 		</div>
 		
