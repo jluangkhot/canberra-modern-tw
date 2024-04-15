@@ -4,18 +4,18 @@
 {% if menu %}
 
 
-	<ul class="flex justify-center space-x-7 uppercase text-xl font-bold">
+	<ul class="md:flex md:justify-center sm:grid sm:grid-cols-1 sm:static sm:z-auto justify-items-center sm:space-y-10 md:space-y-0 space-x-7 uppercase text-xl font-bold">
 		
 		{% for item in items %}
 		
 		
 	
-			<li class="group w-37 { item.classes | join(' ') }}" >
+			<li class="group w-37  { item.classes | join(' ') }}" >
 					
 					<a class="hover:text-yellow" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}
 						
-						<div class="absolute invisible group-hover:visible bg-black text-white rounded  ">
-							<div class="relative -left-4">
+						<div class="md:absolute md:invisible sm:visible group-hover:visible md:bg-black md:text-white rounded sm:bg-none sm:text-black sm:m-auto sm:left-[20rem]  sm:top md:left-auto md:top-auto sm:j sm:top-[10rem]">
+							<div class="relative md:-left-4">
 						{% include "menu.twig" with {'items': item.children} %}
 						</div>
 						</div>
