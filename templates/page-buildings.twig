@@ -3,48 +3,30 @@
 {% extends "base.twig" %}
 
 {% block content %}
+    <div class="content-wrapper bg-cream">
+        {# DEFAULT PAGE CONTENT #}
+        <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+            <img src="http://cm2/wp-content/uploads/2022/08/rsw_1160-5.webp" class="w-full h-[56rem] object-cover object-bottom">
+            <section class="article-content relative">
+                <h1 class="text-yellow text-4xl md:text-6xl lg:text-8xl xl:text-9xl text-center md:text-left absolute top-[56rem] left-0 md:top-auto md:left-auto md:relative w-full md:w-auto md:pl-24 md:transform md:-translate-y-1/2">
+                    Canberra's<br>Modern
+                </h1>
+                <div class="article-body mt-20 px-4 md:px-12">
+                    {{post.content}}
+                </div>
+            </section>
+        </article>
 
-	<div
-		class="content-wrapper">
-		{# DEFAULT PAGE CONTENT #}
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-			<img src="http://cm2/wp-content/uploads/2022/08/rsw_1160-5.webp" class="w-full h-[56rem] object-cover object-bottom ">
-			<section class="article-content">
-				<h1 class="text-yellow text-9xl text-left  article-h1 absolute top-[56rem] w-20 pl-24">{{post.title}}</h1>
-				<div class="article-body mt-20">
-					{{post.content}}
-				</div>
-			</section>
-		</article>
-
-		{# BUILDINGS #}
-		<section>
-			<h2 class="text-yellow"></h2>
-			<ul class="">
-				{# loop through the buildings returned #}
-				{% for building in buildings %}
-					{# load the building tease template #}
-					{% include 'tease-buildings.twig' with { post: building} %}
-				{% endfor %}
-			</ul>
-
-		</section>
-	</div>
-
-	<div
-		class="debug p-8 bg-cream">
-		{# useful for debugging, delete later #}
-		<h1>Debug info</h1>
-
-		<p class="pb-4 bg-cream">post name:
-			{{post.name}}</p>
-
-		<p>file name: page-home.twig</p>
-
-		{# Output what is in the post #}
-		{# {{dump(post)}} #}
-	</div>
-
-	<!-- /content-wrapper -->
+        {# BUILDINGS #}
+        <section class="mt-16">
+            <h2 class="text-2xl text-yellow mb-4">Featured Buildings</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {# loop through the buildings returned #}
+                {% for building in buildings %}
+                    {# load the building tease template #}
+                    {% include 'tease-buildings.twig' with { post: building} %}
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
 {% endblock %}
-
