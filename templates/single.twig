@@ -2,35 +2,109 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-			<img src="{{ post.thumbnail.src|resize(1200, 300) }}">
-			<section class="article-content">
-				<h1 class="article-h1">{{ post.title }}</h1>
-				<p class="blog-author">
-					<time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time>
-				</p>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
+<div class="content-wrapper bg-cream min-h-screen flex flex-col justify-between">
+    
+    <div class="bg-black text-center py-10 relative">
+        <h1 class="videos-text text-yellow text-3xl font-bold">VIDEOS</h1>
+    </div>
+    <p><a href="https://manningclark.org.au/manning-clark-house-virtual-tour/" class=" text-black text-3xl font-bold inline-block py-4 px-9">Manning Clark House Virtual Tour</a></p>
+        
+    <div class="flex justify-between items-center">
+        <!-- Text content at the top -->
+        <div class="col-span-1 md:col-span-1 text-black text-2xl inline-block py-9 px-9 max-w-md h-auto">
+            <p>
+                Canberra Modern were thrilled to be a part of the development of a virtual tour of Robin Boyd's 1952 house for Manning and Dymphna Clark. Both Manning Clark and Robin Boyd were pre-eminent writers and thinkers in the fields of history and architecture, respectively, and shared similar perspectives. Boyd’s design for the Clark home provided an ideal environment to support the principles Manning and Dymphna valued: hospitality, hard work, rigorous debate and a connection to nature.
+            </p>
+        </div>
 
+        <!-- Image -->
+        <div class="flex-shrink-0 px-80">
+            <figure class="wp-block-image">
+                <img src="https://img1.wsimg.com/isteam/ip/713b0fb1-3749-4859-97e2-b7cf5cfb344b/MCH.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:400,cg:true" alt="" style="width: 600px; height: auto;"/>
+            </figure>
+        </div>
+    </div>
 
-		</article>
-	</div>
+    <div class="bg-black py-8 text-white text-center mb-4">
+        <p>VIDEOS</p>
+    </div>
 
-	<div
-		class="debug p-8 bg-debug">
-		{# useful for debugging, delete later #}
-		<h1>Debug info</h1>
+    <article class="post-type-{{ post.post_type }} mt-10 flex justify-between"> <!-- Add flex justify-between to space the videos -->
+        <section class="article-content text-center mx-auto mt-6">
+            <h1 class="article-h1 text-3xl font-bold mb-4">{{ post.title }}</h1>
+            <p class="blog-author text-yellow text-sm">{{ post.author }} | <time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time></p>
+            <div class="article-body mt-6 text-left">
+                <p class="text-lg">{{ post.description }}</p>
+                {{ post.content|raw }}
+            </div>
+        </section>
 
-		<p class="pb-4">post name:
-			{{post.name}}</p>
+        <!-- Video Embeds -->
+        <div class="video-column">
+            <!-- Videos here -->
+        </div>
+    </article>
 
-		<p>file name: single.twig</p>
+    <!-- Black rectangle panels -->
+    <div class="bg-black py-8 text-white text-center mb-4">
+        <p>GROWING UP MODERN' PANEL - GIRALANG PRIMARY SCHOOL</p>
+    </div>
+    <div class="video-column article-content text-center mx-auto mt-9" style="display: flex; flex-wrap: wrap;">
+    <!-- First line -->
+    <div class="video-container" style="flex: 0 0 calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oTAYl6OEWwA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-container" style="flex: 0 0 calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DuHS-2xJExc" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="video-container" style="flex: 0 0 calc(33.33% - 20px); margin-bottom: 20px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FQb9sAwm7ns" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <!-- Second line -->
+    <div class="video-container" style="flex: 0 0 calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9YIG8o5GOrE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-container" style="flex: 0 0 calc(33.33% - 20px); margin-right: 20px; margin-bottom: 20px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/s4F5Ls9Zuko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="video-container" style="flex: 0 0 calc(33.33% - 20px); margin-bottom: 20px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/urGgX8XzkyI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
 
-		{# Output what is in the post #}
-		{# {{dump(post)}} #}
-	</div>
-	<!-- /content-wrapper -->
+    </div>
+           <div class="bg-black py-8 text-white text-center mb-2">
+                 <p>INTERVIEWS</p>
+           </div>
+           <div class="video-column bg-cream" style="display: flex; justify-content: space-between;">
+    <!-- In Conversation with Ian Wong -->
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/U4VcWfYorLU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <!-- Instagram Live chat with Catriona Quinn -->
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Xu8KwFVP5WY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <!-- What is Modernism? -->
+    <div class="video-container">
+        <div class="video-container"></div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/L1MjM2fjOEk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
+    <div class="debug p-10 pb-5 bg-debug">
+        {# useful for debugging, delete later #}
+        <h1 class="text-2xl font-bold mb-4">Debug Info</h1>
+        <p class="text-sm mb-2">Post Name: {{ post.name }}</p>
+        <p class="text-sm mb-2">File Name: single.twig</p>
+        {# Output what is in the post #}
+        {# {{dump(post)}} #}
+    </div>
+    
+    <div class="bg-yellow py-5 text-center">
+        <!-- Add your additional content here -->
+    </div>
+</div>
+<!-- /content-wrapper -->
 {% endblock %}
+
