@@ -1,36 +1,26 @@
 {# TEMPLATE: SINGLE EVENTS.twig #}
 
+
 {% extends "base.twig" %}
 
+
 {% block content %}
-	<div class="content-wrapper">
-		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-			<img src="{{ post.thumbnail.src|resize(1200, 300) }}">
-			<section class="article-content">
-				<h1 class="article-h1">{{ post.title }}</h1>
-				<p class="blog-author">
-					<time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time>
-				</p>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
-		</article>
 
-	</div>
 
-	<div
-		class="debug p-8 bg-debug">
-		{# useful for debugging, delete later #}
-		<h1>Debug info</h1>
 
-		<p class="pb-4">post name:
-			{{post.name}}</p>
+   <div class="content-wrapper text-center sm:p-20 bg-black text-white"> <!-- Changed background to cream -->
+       <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+           <section class="article-content w-[60rem] m-auto">
+               <h1 class="article-h1 text-2xl font-bold">{{ post.title }}</h1>
+               <p class="blog-author">
+                   <time datetime="{{ post.date|date('Y-m-d H:i:s') }}">{{ post.date }}</time>
+               </p>
+               <div class="m-auto article-body text-left w-[40rem] text-[21px] " id="single-events-page">
+                   {{ post.content }}
+               </div>
+           </section>
+       </article>
+   </div>
 
-		<p>file name: single-events.twig</p>
-
-		{# Output what is in the post #}
-		{# {{dump(post)}} #}
-	</div>
-	<!-- /content-wrapper -->
+   <!-- /content-wrapper -->
 {% endblock %}
