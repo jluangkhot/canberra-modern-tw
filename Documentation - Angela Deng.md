@@ -1,7 +1,5 @@
 # 11056 - Assessment 2: Front-end theme - Documentation
 
-
-
 ## Personal contribution:
 In this project, I served as the person in charge of the Canberra Modern and Videos parts of the web page. Although I have mainly used traditional HTML and CSS for website production before, this is my first time coming into contact with Tailwind CSS, so it will take more time to learn and understand this new CSS framework. In the project, I took on the following tasks:
 1. Use Tailwind CSS to design and layout Canberra Modern and Videos pages.
@@ -10,7 +8,6 @@ In this project, I served as the person in charge of the Canberra Modern and Vid
 4. Actively participate in team discussions and meetings, and negotiate with other members to resolve problems.
 
 During the project, I gradually became familiar with the usage of Tailwind CSS through study and practice, and was able to quickly create various styles. At the same time, through communication and cooperation with team members, I have a deeper understanding of web design layout, which also improves my design capabilities and skill levels.
-
 
 ## Problem solved:
 During the project development process, I faced some challenges, mainly focusing on the following aspects:
@@ -26,12 +23,10 @@ During the project, I found the following resources to be very helpful when crea
 2. Online forums and communities: By communicating with Tailwind CSS users and other developers, I got a lot of answers to questions and practical suggestions, which were of great help to the problems I encountered in the project.
 3. Discussion and sharing within the team: Communication and sharing with team members is also an important way for me to learn and grow. Through discussion and sharing with them, I not only solved the problems in the project, but also learned a lot of new knowledge and skills. .
 
-
 #### Summarize:
 By participating in this project, I not only learned how to use Tailwind CSS for web design and layout, but also improved my team collaboration and communication skills. In the process of solving problems and completing tasks, I continued to learn and grow, and made my own contribution to the successful completion of the project. I believe this experience will be helpful to my future work and study. I look forward to playing my role in more projects and continuously improving my skills and abilities.
-
-
 
 #### References
 https://tailwindcss.com/
 
+Wathan, A. (2017). Tailwind CSS - Rapidly build modern websites without ever leaving your HTML. https://tailwindcss.com/
