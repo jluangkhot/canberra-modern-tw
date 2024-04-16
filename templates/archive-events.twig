@@ -1,28 +1,26 @@
-
-
-
 {# This file demonstrates using most of the index.twig template and modifying
-  just a small part. See `search.twig` for an example of another approach #}
-
+   just a small part. See `search.twig` for an example of another approach #}
 
 {% extends "index.twig" %}
 
-
 {% block content %}
-   <div class="article-body  px-5 bg-black">
-       <div class="event-content flex flex-wrap justify-center bg-black">
-           {% for post in posts %}
-               {# it will look for tease-events.twig, and then go to tease.twig #}
-               {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] with { position: loop.index } %}
-       {% endfor %}
-       </div>
-       {# now load the page numbers #}
-       <div class="event-paging text-white pb-5">
-           {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
-       </div>
-   </div>
+
+	{% for post in posts %}
+		{# it will look for tease-events.twig, and then go to tease.twig #}
+		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+	{% endfor %}
+
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+
+	<div
+		class="debug p-8 bg-debug">
+		{# useful for debugging, delete later #}
+		<h1>Debug info</h1>
+
+		<p>file name: archive-events.twig</p>
+
+		{# Output what is in the post #}
+		{# {{dump(post)}} #}
+	</div>
+
 {% endblock %}
-
-
-
-
