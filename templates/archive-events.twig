@@ -4,7 +4,7 @@
 {% extends "index.twig" %}
 
 {% block content %}
-    <div class="bg-cream grid grid-cols-3 ">
+    <div class="bg-cream flex flex-wrap justify-center ">
     {% for post in posts %}
         {# it will look for tease-events.twig, and then go to tease.twig #}
         {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
@@ -12,7 +12,7 @@
     </div>
     {% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
 
-    <div
+    <!---<div
         class="debug p-8 bg-debug">
         {# useful for debugging, delete later #}
         <h1>Debug info</h1>
@@ -21,7 +21,7 @@
 
         {# Output what is in the post #}
         {# {{dump(post)}} #}
-    </div>
+    </div>-->
     
 
 {% endblock %}

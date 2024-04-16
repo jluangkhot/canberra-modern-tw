@@ -10,8 +10,8 @@
 		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
 			<img src="http://cm2/wp-content/uploads/2022/08/rsw_1160-5.webp" class="w-full h-[56rem] object-cover object-bottom ">
 			<section class="article-content">
-				<h1 class="text-yellow text-9xl text-left  article-h1 absolute top-[56rem] w-20 pl-24">{{post.title}}</h1>
-				<div class="article-body mt-20">
+				<h1 class="text-yellow text-9xl text-left  article-h1 absolute top-[60rem] w-20 pl-24 drop-shadow " id="cm-heading">{{post.title}}</h1>
+				<div class="article-body pl-24 w-[40rem] py-[10rem] ">
 					{{post.content}}
 				</div>
 			</section>
@@ -20,12 +20,14 @@
 		{# BUILDINGS #}
 		<section>
 			<h2 class="text-yellow"></h2>
-			<ul class="w-screen grid grid-cols-2 " id="buildings-main">
+			<ul class="bg-cream ">
 				{# loop through the buildings returned #}
 				{% for building in buildings %}
 					{# load the building tease template #}
+					
 					{% include 'tease-buildings.twig' with { post: building} %}
 				{% endfor %}
+				
 			</ul>
 
 		</section>

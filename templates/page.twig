@@ -3,37 +3,67 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper test">
+    <div class="content-wrapper test">
 
-		
-			<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-		
-			<section class="article-content bg-cream">
-	
-				<h1 class="bg-primary article-h1 font-bold text-2xl p-8 uppercase flex justify-center text-white">{{post.title}}</h1>
-				
-				<div class="article-body grid grid-cols-3 gap-4 px-60 py-[6rem] *:bg-white *:flex *:justify-center relative *:p-14 text-sm">
-					
-					{{post.content}}
-					
-				</div>
-			</section>
-		</article>
-	</div>
+        
+            <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+        
+            <section class="article-content bg-cream">
+    
+                <h1 class="bg-primary article-h1 font-bold text-2xl p-8 uppercase flex justify-center text-white">{{post.title}}</h1>
+                {% if post.title == 'Galleries'  %}
+                    <div class="gallery-content px-5 py-3">
+                        <div class="gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
-	<div
-		class="debug p-8 bg-debug">
-		{# useful for debugging, delete later #}
-		<h1>Debug info</h1>
+                       </div>
+                       <div class="hidden">
+                           {{ post.content|raw }}
+                       </div>
+                    </div>
+                {% else %}
+                    <div class="article-body grid grid-cols-3 gap-4 px-60 py-[6rem] *:bg-white *:flex *:justify-center relative *:p-14 text-sm">
+                        
+                        {{post.content}}
+                        
+                    </div>
+                {% endif %}
+            </section>
+        </article>
+    </div>
 
-		<p class="pb-4">post name:
-			{{post.name}}</p>
+    <!--<div
+        class="debug p-8 bg-debug">
+        {# useful for debugging, delete later #}
+        <h1>Debug info</h1>
 
-		<p>file name: page.twig</p>
+        <p class="pb-4">post name:
+            {{post.name}}</p>
 
-		{# Output what is in the post #}
-		{# {{dump(post)}} #}
-	</div>
+        <p>file name: page.twig</p>
 
-	<!-- /content-wrapper -->
+        {# Output what is in the post #}
+        {# {{dump(post)}} #}
+    </div>-->
+
+    <script>
+           let gallery = document.querySelector(".gallery");
+           let galleryWP = document.getElementsByClassName("wp-block-gallery")[0];
+           let imgs = galleryWP.querySelectorAll("img");
+           
+           imgs.forEach(function (img, inx){
+               // set attribute for img
+               img.classList.add('h-full', 'max-w-full', 'rounded-lg');  
+
+               // set attribute for slide
+               div = document.createElement("div");
+                div.classList.add('h-80');
+               // add img into slide
+               div.appendChild(img);
+
+               // add slide into gallery
+               gallery.appendChild(div);
+           });
+       </script>
+
+    <!-- /content-wrapper -->
 {% endblock %}

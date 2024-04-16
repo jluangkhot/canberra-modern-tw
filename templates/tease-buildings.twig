@@ -1,15 +1,25 @@
 {# TEMPLATE: INDIVIDUAL BUILDING #}
 {# this is the single building that is looped through on the archive-buildings.twig file #}
 
-	<article class="tease tease-{{post.type}} w-[40rem]" id="tease-{{post.id}}"> {% block content %}
-		<h2 class="h2">
+	<article class="tease odd:ml-auto odd:mr-[18rem] even:ml-[18rem] even:mr-auto p-[2rem]  tease-{{post.type}} w-[40rem]  ms:w-full md:w-1/2 lg:w-2/6 " id="tease-{{post.id}}"> 
+		
+		{% block content %}
+		<div class="w-[15rem]" id="building-description"> 
+		<h2 class="h2 text-3xl font-bold relative hover:text-yellow">
 			<a href="{{post.link}}">{{post.title}}</a>
 		</h2>
-		<h3>Risk Status</h3>
-		<p>{{ post.risk_status }}</p>
-		<p>{{ post.excerpt({ words:10, read_more: "Keep reading &rarr;" }) }}</p>
-	</p>
+		
+			<div class="text-xl">
+				<p class="">Risk Status:</p>
+				<p>{{ post.risk_status }}</p>
+			</div>
+				<p class="hover:text-yellow">{{ post.excerpt({ words:20, read_more: "Read More" }) }}</p>
+			
+		</div>
+
 	{% if post.thumbnail %}
-		<img src="{{post.thumbnail.src}}"/>
+		<img src="{{post.thumbnail.src}}" class="w-[30rem] h-[30rem]"/>
 	{% endif %}
-{% endblock %}</article>
+{% endblock %}
+
+</article>

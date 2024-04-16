@@ -1,14 +1,19 @@
-<article class="space-y-[2rem] tease tease-{{post.type}}" id="tease-{{post.id}}">
+<article class="w-full h-full ms:w-full md:w-1/2 lg:w-2/6 px-3 pt-3 mb-5 tease tease-{{post.type}} " id="tease-{{post.id}}">
     {% block content %}
-    {% if post.thumbnail %}
-        <img class="w-full h-full" src="{{post.thumbnail.src}}"/>
-    {% endif %}
-        <div class="text-white bg-black w-[40rem] m-auto relative bottom-[9.25rem] p-[rem] ">
-        <h2 class="h2">
-            <a href="{{post.link}}">{{post.title}}</a>
-        </h2>
-        <p>{{ post.excerpt({ words:10, read_more: "Keep reading &rarr;" }) }}</p>
-    </p>
+    <div class="bg-black h-full">
+        
+            <div class="w-full h-52">
+            {% if post.thumbnail %}
+                <img class="w-full h-full" src="{{post.thumbnail.src}}"/>
+            {% endif %}
+            </div>
+            <div class="text-white h-40 px-4 py-2 relative">
+                <h2 class="h2 text-xl font-bold">
+                    <a href="{{post.link}}">{{post.title}}</a>
+                </h2>
+                <p class="w-full">{{ post.excerpt({ words:9, read_more: "Keep reading &rarr;" }) }}</p>
+                </p>
+            </div>
+        
     </div>
-    
 {% endblock %}</article>

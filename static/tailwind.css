@@ -79,31 +79,24 @@
     background-color: #FFF9E0;
 }
 
-.tease-buildings h2, .tease-buildings h3, .tease-buildings p{
-    float: left;
-    color: black;
+
+
+
+#tease-142 #building-description, #tease-140 #building-description, #tease-138 #building-description, #tease-136 #building-description, #tease-134 #building-description, #tease-132 #building-description, #tease-130 #building-description,
+#tease-128 #building-description, #tease-124 #building-description, #tease-120 #building-description{
     position: relative;
+    left: 90%;
+    text-align: left;
+    top:13rem;
 }
 
-.tease-buildings p {
-    color: rgb(5, 5, 5);
-    text-align: center;
-    width: 80%;
-}
-
-#tease-142, #tease-140, #tease-138, #tease-136, #tease-134, #tease-132, #tease-130,
-#tease-128, #tease-124, #tease-120 {
-    margin-right: 0;
-    margin-left: auto;
-    width:screen;
-   
-}
-
-#tease-143, #tease-141, #tease-139, #tease-137, #tease-135, #tease-133, #tease-131,
-#tease-129, #tease-127, #tease-123 {
-    width: screen;
-    margin-right: auto;
-    margin-left: 0;
+#tease-143 #building-description, #tease-141 #building-description, #tease-139 #building-description, #tease-137 #building-description, #tease-135 #building-description, #tease-133 #building-description, #tease-131 #building-description,
+#tease-129 #building-description, #tease-127 #building-description, #tease-123 #building-description{
+    
+    position: relative;
+    right: 50%;
+    text-align: right;
+    top:13rem;
 }
     
 
@@ -123,37 +116,10 @@
 
 }
 
-.tease-events{
-    width:20rem;
-    margin: auto;
-}
-
-.tease-events{
-    width: 40rem;
-    margin: auto;
-    
-}
-.tease-events h2{ 
-    font-size: 30px;
-    width: 30rem;
-    margin: auto;
-   
-}
-.tease-events p{ 
-    font-size: 25px;
-    width: 30rem;
-    margin: auto;
-}
 
 
-.tease-events img{
-    margin: auto;
-    width: 70rem;
-    height: 30rem;
-    object-fit: fill;
 
 
-}
 
 
 #single-events-page img{
@@ -165,4 +131,19 @@
 #buildings-main article img{
     width: 50rem;
     height: 30rem;
+}
+
+
+#cm-heading {
+    text-shadow: 1px 1px 10px black;
+}
+
+.tease-events .read-more{
+    background-color: #FFC400;
+    color: black;
+    border-radius: 15px;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
 }
