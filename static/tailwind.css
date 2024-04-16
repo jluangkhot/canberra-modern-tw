@@ -118,8 +118,75 @@
     background-color: #FFC400;
     padding: 0.5rem;
     border-radius: 0.25rem;
-    position: relative;
     top: 0.5rem;
+
+}
+
+.tease-events{
+    width: 40rem;
+    margin: auto;
+    
+}
+.tease-events h2{ 
+    font-size: 30px;
+    width: 30rem;
+    margin: auto;
+   
+}
+.tease-events p{ 
+    font-size: 25px;
+    width: 30rem;
+    margin: auto;
+}
+
+
+.tease-events img{
+    margin: auto;
+    width: 70rem;
+    height: 30rem;
+    object-fit: fill;
+
+
+}
+
+
+#single-events-page img{
+    width: 50rem;
+
+
+}
+
+.tease-events{
+    width: 40rem;
+    margin: auto;
+    
+}
+.tease-events h2{ 
+    font-size: 30px;
+    width: 30rem;
+    margin: auto;
+   
+}
+.tease-events p{ 
+    font-size: 25px;
+    width: 30rem;
+    margin: auto;
+}
+
+
+.tease-events img{
+    margin: auto;
+    width: 70rem;
+    height: 30rem;
+    object-fit: fill;
+
+
+}
+
+
+#single-events-page img{
+    width: 50rem;
+
 
 }
 
