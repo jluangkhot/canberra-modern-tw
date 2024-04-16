@@ -1,85 +1,10 @@
-# Canberra Modern Theme - Tailwind CSS version
+# DOCUMENTATION 
+I was undertaken with two pages in a collective task: the gallery and the event page. At first, I used Figma to design a prototype of my webpage, which facilitated my development when I began constructing the website. After having a clear idea, I started to design and write my code. According to my design, the event page's purpose was to display all previous events that took place in Canberra. In addition, the gallery displays all photographs depicting Canberra's events and activities.
+Initially, I prioritised the event page since I had seen that my gallery page had the same page code as the about, supporters, and partners pages. I attempted to generate and arrange my characteristics on that webpage in accordance with the Figma prototype I designed. On the archive-event page of the events section, I used the tailwind class to establish the background colour and padding. Creating the blocks for every single article consistently makes my page look more asthetic and cleaner. By using TailWind, I can make the process of making my website easier and shorter. In the gallery page, I made it look like a typical museum's gallery online. to make it easier for the viewer to view and admire the real-life activities and life habits of Canberrans. Using the code gril-column helps me solve many tough troubles when I write my website. 
+At first, I saw the process of working on those two pages as rather simple, and I had confidence in my ability to achieve my goal. During the course of developing the website, I faced several challenging barriers that helped me grow personally and gain significant knowledge. Collaborating on a group assignment and attempting to merge GitHub changes locally for the first time resulted in several challenges with my collaboration, leading to multiple disagreements within our group while pushing and pulling code from the original repository. Nonetheless, my leader thoroughly researched a new brand and seamlessly integrated our code to effectively address the issue. My first encounter with Tailwind was confusing, and my code did not work correctly when I ran my website. It took a considerable amount of time for me to adjust to using Tailwind. In addition, during the process of combining all the sites, I discovered that my gallery page was causing a disruption to our website. Accidentally, due to my first time using the complex github, I merged code to the master brand and messed up my group assignment. I got confused, and all of my group tried to fix my problems by creating another brand. however, due to one of my pages having the same page code as three other pages that belong to other members. When we merged it together, it deleted my member's code. However, I rewrote code to solve that problem. As a result, we thoroughly analysed the code of each page to identify and fix any errors, ensuring that each page functions correctly following the merging procedure. This experience has taught me the importance of thorough testing and careful attention to detail in web development projects. Finally, I made my gallery a carousel slide. Due to the trouble when my team merged the code together, I changed my gallery to an album type. In addition, my objective was to include error handling to promptly detect and handle any potential problems related to data interpretation. This will enhance the efficiency of the development process and the overall quality of our online projects. 
+Throughout the duration of our project, my group has shown remarkable mutual assistance. We have done many video conferences and organised post-class meetups to assign tasks and provide mutual support. I really appreciate the concentrated, passionate, and conscientious endeavours of every member of my team. However, my team members also have difficulties and confusion while attempting to merge three files together, since my files have certain issues. Despite this, my teammates are really helpful and guide me on how to resolve each difficulty, working together to find solutions. This experience has not only enhanced our ability to work together effectively but also cultivated a strong feeling of friendship and mutual support among us. In the future, we will maintain excellent communication and efficient collaboration to guarantee the success of our next initiatives. Through collective efforts, we have successfully surmounted this obstacle, resulting in the cultivation of a more robust camaraderie and reliance among our team. I am certain that we will successfully overcome any challenges that arise in the future. I am certain that our collaboration and commitment will result in the project's successful completion in the future. 
 
-The basic bones of this theme have been created by Ben Ennis Butler as a starting point for students studying front-end web design (11056).
-
-This version has been set up to use TailwindCSS.
-
-
-## How to use it!
-
-1. First install Wordpress with Local following the instructions on Canvas
-2. Make sure your Wordpress site is running!
-3. Pull the lastest code from GitHub, via GitHub desktop or VSCode
-4. In your terminal, navigate to the theme folder (if you've set VSCode up properly you should be in the root theme folder), then type `npm run watch`. If this doesn't work, you may need to install Node, details below.
-5. Start writing code!
-
-
-## Install Node
-
-For Windows:
-Download Installer: [Node.js](https://nodejs.org/)
-
-Run Installer:
-Run the downloaded installer and follow the installation instructions.
-Ensure that the "npm" package manager option is selected during installation.
-
-Verify Installation:
-Open a command prompt, PowerShell or terminal in VSCode
-Run the following commands to verify the installation:
-
-`node -v`
-`npm -v`
-
-These commands should display the installed Node.js and npm versions.
-
-
-For Mac:
-Download Installer: [Node.js](https://nodejs.org/)
-
-Run Installer:
-Run the downloaded installer and follow the installation instructions.
-Ensure that the "npm" package manager option is selected during installation.
-
-Verify Installation:
-Open terminal in VSCode
-Run the following commands to verify the installation:
-
-`node -v`
-`npm -v`
-
-These commands should display the installed Node.js and npm versions.
-
-## Folder structure
-
-`assets`: This folder is often used to store CSS, JavaScript, and images related to your theme.
-
-`inc`: This folder can contain various PHP files, each handling specific functionalities. For example, custom-post-types.php might define custom post types, and theme-support.php might add theme support features.
-
-`templates`: This is where your Twig templates reside. The `partials` subfolder can contain reusable components like headers, footers, and navigation.
-
-`functions.php`: This file includes functions related to theme setup, enqueueing scripts and styles, and other theme-specific functionalities. You probably won't touch it.
-
-`style.css`: A style.css file is needed for WordPress theme identification. When using Tailwind, the styles are automatically added to this, so no need to use it.
-
-
-## Built upon
-There are quite a few things in use in order to get this to work:
-
-#### TailwindCSS v3.4.1
-Tailwind is a utility-first CSS framework
-[Tailwind Docs](https://tailwindcss.com/docs/)
-
-#### Timber Starter Theme
-The "_s" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. [Starter Theme](https://travis-ci.com/github/timber/starter-theme)
-
-#### Twig
-Timber uses Twig. Twig is a flexible and secure template engine for PHP used primarily in web development to separate the logic of the application from its presentation layer.
-[Twig](https://twig.symfony.com/)
-
-
-## Other Resources
-
-* [Twig for Timber Cheatsheet](http://notlaura.com/the-twig-for-timber-cheatsheet/)
-* [Timber and Twig Reignited My Love for WordPress](https://css-tricks.com/timber-and-twig-reignited-my-love-for-wordpress/) on CSS-Tricks
-* [A real live Timber theme](https://github.com/laras126/yuling-theme).
-
+## Resources
+Rapidly build modern websites without ever leaving your HTML. Tailwind CSS. (n.d.). https://tailwindcss.com/ 
+Symfony. (n.d.). Twig. https://twig.symfony.com/doc/ 
+Themesberg. (n.d.). Tailwind CSS Gallery (masonry): flowbite.flowbite.com  https://flowbite.com/docs/components/gallery/ 
