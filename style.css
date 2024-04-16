@@ -563,14 +563,39 @@ video {
 .top-\[56rem\] {
   top: 56rem;
 }
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
 .m-auto {
   margin: auto;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 .mt-20 {
   margin-top: 5rem;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+.mt-10 {
+  margin-top: 2.5rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
+.mt-9 {
+  margin-top: 2.25rem;
+}
 .block {
   display: block;
+}
+.inline-block {
+  display: inline-block;
 }
 .flex {
   display: flex;
@@ -595,6 +620,12 @@ video {
 }
 .h-screen {
   height: 100vh;
+}
+.h-auto {
+  height: auto;
+}
+.min-h-screen {
+  min-height: 100vh;
 }
 .w-1\/2 {
   width: 50%;
@@ -626,6 +657,12 @@ video {
 .w-screen {
   width: 100vw;
 }
+.max-w-md {
+  max-width: 28rem;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
 .resize {
   resize: both;
 }
@@ -635,11 +672,20 @@ video {
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .items-center {
   align-items: center;
 }
 .justify-center {
   justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
 }
 .justify-items-center {
   justify-items: center;
@@ -803,6 +849,26 @@ video {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
+.px-80 {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.py-9 {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -827,8 +893,14 @@ video {
 .pt-\[1rem\] {
   padding-top: 1rem;
 }
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
 .text-left {
   text-align: left;
+}
+.text-center {
+  text-align: center;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -856,6 +928,14 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .font-bold {
   font-weight: 700;
@@ -1116,6 +1196,10 @@ video {
 
   .md\:top-auto {
     top: auto;
+  }
+
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
   }
 
   .md\:flex {
