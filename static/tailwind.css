@@ -93,25 +93,20 @@
 
 #tease-142, #tease-140, #tease-138, #tease-136, #tease-134, #tease-132, #tease-130,
 #tease-128, #tease-124, #tease-120 {
-    float:left;
-    margin-right: 50px;
-    width:100%;
-    height: auto;
+    margin-right: 0;
+    margin-left: auto;
+    width:screen;
+   
 }
 
 #tease-143, #tease-141, #tease-139, #tease-137, #tease-135, #tease-133, #tease-131,
 #tease-129, #tease-127, #tease-123 {
-    float: right;
-    margin-left: 10px;
-    width: 800px;
-    height: auto;
+    width: screen;
+    margin-right: auto;
+    margin-left: 0;
 }
+    
 
-#tease-141, #tease-142, #tease-143, #tease-140, #tease-139, #tease-138, #tease-137, 
-#tease-136, #tease-135, #tease-134, #tease-133, #tease-132, #tease-131, #tease-130,
-#tease-129, #tease-128, #tease-127, #tease-124, #tease-123, #tease-120 {
-    background-color:#FFF9E0;
-}
 
 #tease-292 p{
     width: 33rem;
@@ -126,4 +121,18 @@
     position: relative;
     top: 0.5rem;
 
+}
+
+.tease-events{
+    width:20rem;
+    margin: auto;
+}
+
+.tease-events h2{
+
+}
+
+#buildings-main article img{
+    width: 50rem;
+    height: 30rem;
 }
