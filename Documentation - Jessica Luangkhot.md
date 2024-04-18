@@ -1,85 +1,82 @@
-T# Canberra Modern Theme - Tailwind CSS version
+# Individual Contribution
+I was originally tasked with the following pages: 
+- Home 
+- Partners 
+- Supporters 
+- News (just 'News 'Page) 
+- Header  
 
-The basic bones of this theme have been created by Ben Ennis Butler as a starting point for students studying front-end web design (11056).
+However, due to some time constraints, layout similarities and issues with website progression, I also ended up coding: 
 
-This version has been set up to use TailwindCSS.
+- Canberra Modern (just 'Canberra Modern' page)  
+- Footer 
+- About 
+- Links  
 
+This assessment allowed me to understand how WordPress and other Content Management Sytems function. Utilizing Tailwind CSS as a framework also allowed me to gain knowledge about CSS frameworks and how they accelerate website development.  
 
-## How to use it!
-
-1. First install Wordpress with Local following the instructions on Canvas
-2. Make sure your Wordpress site is running!
-3. Pull the lastest code from GitHub, via GitHub desktop or VSCode
-4. In your terminal, navigate to the theme folder (if you've set VSCode up properly you should be in the root theme folder), then type `npm run watch`. If this doesn't work, you may need to install Node, details below.
-5. Start writing code!
-
-
-## Install Node
-
-For Windows:
-Download Installer: [Node.js](https://nodejs.org/)
-
-Run Installer:
-Run the downloaded installer and follow the installation instructions.
-Ensure that the "npm" package manager option is selected during installation.
-
-Verify Installation:
-Open a command prompt, PowerShell or terminal in VSCode
-Run the following commands to verify the installation:
-
-`node -v`
-`npm -v`
-
-These commands should display the installed Node.js and npm versions.
+Tailwind CSS further enhanced my knowledge on pseudo classes and how they can assist in certain situations. Tailwind's "Docs" pages were also really insightful and gave coherent descriptions about all their modifiers and CSS itself. 
 
 
-For Mac:
-Download Installer: [Node.js](https://nodejs.org/)
 
-Run Installer:
-Run the downloaded installer and follow the installation instructions.
-Ensure that the "npm" package manager option is selected during installation.
+In this code: 
+``` 
+<article class="tease odd:ml-auto odd:mr-[18rem] even:ml-[18rem] even:mr-auto p-[2rem] tease-{{post.type}} w-[40rem]" id="tease-{{post.id}}">  
+ ```
 
-Verify Installation:
-Open terminal in VSCode
-Run the following commands to verify the installation:
+I used the pseudo classes "`:odd`" and "`:eve`n" that are Tailwind modifiers for "`&:nth-child(odd)`" and "`&:nth-child(even)`" to alternate the building posts left and right.  
 
-`node -v`
-`npm -v`
+ 
 
-These commands should display the installed Node.js and npm versions.
+With this code: 
+```
+<li class="group w-37  { item.classes | join(' ') }}" >
+          <a class="hover:text-yellow" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}
 
-## Folder structure
+                  <div class="md:absolute md:invisible sm:visible group-hover:visible md:bg-black md:text-white rounded sm:bg-none
+                              sm:text-black sm:m-auto sm:left-[20rem] sm:top md:left-auto md:top-auto sm:j sm:top-[10rem]"> 
 
-`assets`: This folder is often used to store CSS, JavaScript, and images related to your theme.
+                                  <div class="relative md:-left-4"> 
+                                      {% include "menu.twig" with {'items': item.children} %} 
+                                  </div>
 
-`inc`: This folder can contain various PHP files, each handling specific functionalities. For example, custom-post-types.php might define custom post types, and theme-support.php might add theme support features.
+                  </div> 
+          </a>
+</li>
+```
+ I used the "`group:hover:visible`" to target the parent element of the menu item children and applied "`group`" to the parent element. I also used media queries such as "`md:`" and "`sm:`" to target certain breakpoints of screen size. Unfortunately, we had other incomplete pages so I was not able to finish creating a hamburger menu, which is what I had originally intended to do.  
 
-`templates`: This is where your Twig templates reside. The `partials` subfolder can contain reusable components like headers, footers, and navigation.
-
-`functions.php`: This file includes functions related to theme setup, enqueueing scripts and styles, and other theme-specific functionalities. You probably won't touch it.
-
-`style.css`: A style.css file is needed for WordPress theme identification. When using Tailwind, the styles are automatically added to this, so no need to use it.
-
-
-## Built upon
-There are quite a few things in use in order to get this to work:
-
-#### TailwindCSS v3.4.1
-Tailwind is a utility-first CSS framework
-[Tailwind Docs](https://tailwindcss.com/docs/)
-
-#### Timber Starter Theme
-The "_s" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. [Starter Theme](https://travis-ci.com/github/timber/starter-theme)
-
-#### Twig
-Timber uses Twig. Twig is a flexible and secure template engine for PHP used primarily in web development to separate the logic of the application from its presentation layer.
-[Twig](https://twig.symfony.com/)
+This experience has taught me to code with responsiveness in mind from the beginning of my projects as it is much easier to program responsive elements as you create the layout of the website. This also eliminates the need to decipher our code again. 
 
 
-## Other Resources
 
-* [Twig for Timber Cheatsheet](http://notlaura.com/the-twig-for-timber-cheatsheet/)
-* [Timber and Twig Reignited My Love for WordPress](https://css-tricks.com/timber-and-twig-reignited-my-love-for-wordpress/) on CSS-Tricks
-* [A real live Timber theme](https://github.com/laras126/yuling-theme).
+## Issue Resolution
 
+One of the biggest issues I encountered was being unable to edit HTML elements directly because of the looping function of the site template. This made some of the website difficult to code, especially with Tailwind CSS, as we need access to the elements to implement the styling classes. To resolve this, we had to target them with pure CSS. 
+
+The biggest challenge we encountered as a group was pushing and pulling each other's code to and from GitHub. We had a significant amount of conflicts within our code due to difference in coding experience, different coding styles and comprehension of the template files. These challenges were addressed with constant communication and reverting to previous working versions of our code by creating new branches on GitHub. On our last merge, we encountered thousands of corrupted files due to template file changes and decided that easiest way to code the rest of the site was to update from one device only.  
+
+Unfortunately, parts of the website are incomplete and some of the pages were not made to be responsive for different screen sizes. The time I had allocated to improve site responsiveness was spent developing other components of our website. 
+
+
+## Team Collaboration
+
+In this group assessment, I was the project leader and took initiative with the design stage and the website coding. We collaboratively worked on the Figma high-fidelity prototype and discussed the visual theme for our website. I then created a new visual theme based off our discussions, asked for feedback and kept the group updated with any changes. Team collaboration was moderate as it was hard to discuss certain concepts and track progression without meeting up as frequently as preferred. In the beginning we were tasked with about 3-4 pages each but due to varying experiences with coding, I had to assume the responsibility for most pages on the website. 
+
+## References and resources
+Fathema Khanom. (n.d.). Facebook Icon [Online Image]. In freepik.com.      
+    &nbsp; https://www.freepik.com/icon/facebook_3670032#fromView=keyword&page=2&position=76&uuid=677cf631-1a7c-4c19-b109-28f04e69a773 
+  &nbsp;   &nbsp; Footer Facebook Icon 
+
+Gann-Owens, R. (2022). A brick wall with plants growing on it [Online Image]. In Unsplash.
+&nbsp; https://unsplash.com/photos/a-brick-wall-with-plants-growing-on-it-jzKk-d0qqcM
+&nbsp; &nbsp; Homepage image banner 
+
+Hight Quality Icons. (n.d.). Instagram Icon [Online Image]. In https://www.freepik.com/.                 
+    https://www.freepik.com/icon/instagram_3670125
+      &nbsp;   &nbsp; Footer Instagram Icon 
+
+Installation: Tailwind CLI - Tailwind CSS. (n.d.). Tailwindcss.com.                                       
+  &nbsp; https://tailwindcss.com/docs/installationTailwind CSS 
+  &nbsp;   &nbsp; 
+  Documentation Page 
